@@ -1,0 +1,264 @@
+<style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --navbar-height: 60px;
+        }
+        .navbar{
+            background-color: rgba(170, 167, 167, 0.521);
+            height: 42px;
+        
+            position: sticky;
+        }
+      #logo  img{
+            width: 80px;
+            height: 80px;
+        }
+        #logo{
+            display: flex;
+            text-align: center;
+          
+        }
+        #logo{
+            position: absolute;
+        }
+        #logo::before{
+           content: "";
+           background-color: rgb(153, 147, 147);
+           position: absolute;
+           height: 100%;
+           width: 100%;
+           z-index: -1;
+           opacity: 0.1;
+           top: 0px;
+           left: 0px;
+        }
+        #logo ul{
+            display: flex;
+           font-family: 'Baloo Bhai', cursive;
+        }
+        #logo ul li{
+            display: flex;
+            height: 40px;
+            width: 200px;
+        }
+        #logo ul li a{
+            display: block;
+            padding: 10px 25px;
+           
+            margin-left: 5px;
+            margin-right: 5px;
+            text-decoration: none;
+            color: white;
+            /* color: rgb(14, 247, 247); */
+            border-radius: 10px;
+        }
+        #logo ul li a:hover{
+            background-color: white;
+            padding: 10px;
+            color: rgb(240, 109, 49);
+    
+       }
+       #home{
+           display: flex;
+           flex-direction: column;
+           padding: 4px 200px;
+           height: 360px;
+           justify-content: center;
+           align-items: center;
+         
+           
+       }
+       #home::before{
+           content: "";
+           background:url('https://s3.amazonaws.com/prod.tctmd.com/public/2021-03/Eating%20More%20Ultraprocessed%20%E2%80%98Junk%E2%80%99%20Food%20Linked%20to%20Higher%20CVD%20Risk.jpeg') no-repeat center center/cover;
+           position: absolute;
+           height: 70%;
+           width: 100%;
+           z-index: -1;
+           top: 0px;
+           left: 0px;
+           opacity: 0.6;
+           
+    
+       }
+       #home h1{
+           color: rgb(240, 109, 49);
+           text-align: center;
+       }
+       #home p{
+        color: rgb(46, 58, 82);
+           text-align: center;
+           font-weight: bolder;
+       }
+       .chanda{
+           font-size: 3rem;
+           padding: 12px;
+           font-size: 3rem;
+           font-family: 'Baloo Bhai', cursive;
+       }
+       button{
+           padding: 6px 20px;
+           background-color: antiquewhite;
+           color: rgb(158, 123, 123);
+           margin: 20px;
+           font-size: 1.4rem;
+           border-radius: 20px;
+           cursor: pointer;
+       }
+     
+       button{
+           padding: 6px 20px;
+           background-color: antiquewhite;
+            color: rgb(240, 109, 49);
+           margin: 20px;
+           font-size: 1.4rem;
+           border-radius: 20px;
+           cursor: pointer;
+           display: block;
+           display: flex;
+           text-align: center;
+
+       }
+       .center{
+           text-align: center;
+       }
+       .primary{
+           font-size: 4rem;
+           padding: 15px;
+
+       }
+       .secondary{
+           font-size: 2rem;
+           padding: 15px;
+           
+       }
+       #services{
+           margin: 35px;
+           display: flex;
+
+
+       }
+       #services .box{
+           border: 4px solid red;
+           padding: 35px;
+           margin: 4px 6px;
+           border-radius: 30px;
+           background-color: antiquewhite;
+
+       }
+       #services .box img{
+           height: 160px;
+           margin: auto;
+           display: block;
+           border-radius: 25px;
+
+
+       }
+       .services{
+           text-align: center;
+
+       }
+       .services h1{
+           color: rgb(14, 247, 247);
+          
+
+       }
+       #clients{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .clients{
+           padding: 50px;
+          
+          
+       }
+       #client_section::before{
+
+           content: "";
+           position: absolute;  
+           width: 100%;
+           height: 90%;
+           z-index: -2;
+           background: url('/images/clients.jpg');
+           opacity: 0.5;
+           
+
+
+       }
+       #clients img{
+           height: 60px;
+           margin-top: 8px;
+           margin-right: 10px;
+           padding: 9px;
+       }
+       .primary1{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 4rem;
+
+       }
+       #client_section{
+           position: relative;
+           height: 344px;
+       }
+       #contact{
+           position: relative;
+       }
+       #contact::before{
+           content: "";
+           position: absolute;
+           width: 100%;
+           height:100%;
+           z-index: -1;
+           background: url('https://thumbs.dreamstime.com/b/contact-us-technical-support-center-customer-service-internet-business-technology-concept-hotline-businessman-hand-holding-icon-226509440.jpg');
+       }
+       footer{
+           background-color: black;
+           color: white;
+           padding: 10px 20px;
+       }
+       #contact_box{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 30px;
+       }
+     #contact_box input,
+     #contact_box area{
+         width: 100%;
+         padding: 0.35rem;
+
+
+     }
+     #contact h1{
+         text-align: center;
+         font-size: 4rem;
+     }
+     #contact_box form{
+         width: 40%;
+     }
+     #contact_box label{
+         font-size: 1.5rem;
+     }
+     footer{
+         text-align: center;
+         /* margin: auto;
+         display: block; */
+     }
+     #bulk_ordering{
+         margin: auto;
+         display: block;
+         font-size: 15px;
+        
+     }
+  
+       
+   
+    
+    </style>

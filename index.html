@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery </title>
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (max-width)" href="css/phone.css">
+   
+ 
+    <style> 
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --navbar-height: 60px;
+        }
+        .navbar{
+            background-color: rgba(21, 50, 50, 0.521);
+            height: 42px;
+        
+            position: fixed;
+        }
+      #logo  img{
+            width: 80px;
+            height: 80px;
+        }
+        #logo{
+            display: flex;
+            text-align: center;
+          
+        }
+        #logo{
+            position: absolute;
+        }
+        #logo::before{
+           content: "";
+           background-color: rgb(170, 47, 47);
+           position: absolute;
+           height: 100%;
+           width: 100%;
+           z-index: -1;
+           opacity: 0.1;
+           top: 0px;
+           left: 0px;
+        }
+        #logo ul{
+            display: flex;
+           font-family: 'Baloo Bhai', cursive;
+        }
+        #logo ul li{
+            display: flex;
+            height: 40px;
+            width: 200px;
+        }
+        #logo ul li a{
+            display: block;
+            padding: 10px 25px;
+           
+            margin-left: 5px;
+            margin-right: 5px;
+            text-decoration: none;
+            color: white;
+            /* color: rgb(14, 247, 247); */
+            border-radius: 10px;
+        }
+        #logo ul li a:hover{
+            background-color: white;
+            padding: 10px;
+            color: rgb(240, 109, 49);
+    
+       }
+       #home{
+           display: flex;
+           flex-direction: column;
+           padding: 4px 200px;
+           height: 360px;
+           justify-content: center;
+           align-items: center;
+         
+           
+       }
+       #home::before{
+           content: "";
+           background:url('https://s3.amazonaws.com/prod.tctmd.com/public/2021-03/Eating%20More%20Ultraprocessed%20%E2%80%98Junk%E2%80%99%20Food%20Linked%20to%20Higher%20CVD%20Risk.jpeg') no-repeat center center/cover;
+           position: absolute;
+           height: 70%;
+           width: 100%;
+           z-index: -1;
+           top: 0px;
+           left: 0px;
+           opacity: 0.6;
+           
+    
+       }
+       #home h1{
+           color: rgb(240, 109, 49);
+           text-align: center;
+       }
+       #home p{
+        color: rgb(46, 58, 82);
+           text-align: center;
+           font-weight: bolder;
+       }
+       .chanda{
+           font-size: 3rem;
+           padding: 12px;
+           font-size: 3rem;
+           font-family: 'Baloo Bhai', cursive;
+       }
+       button{
+           padding: 6px 20px;
+           background-color: antiquewhite;
+           color: rgb(158, 123, 123);
+           margin: 20px;
+           font-size: 1.4rem;
+           border-radius: 20px;
+           cursor: pointer;
+       }
+     
+       button{
+           padding: 6px 20px;
+           background-color: antiquewhite;
+            color: rgb(240, 109, 49);
+           margin: 20px;
+           font-size: 1.4rem;
+           border-radius: 20px;
+           cursor: pointer;
+           display: block;
+           display: flex;
+           text-align: center;
+
+       }
+       .center{
+           text-align: center;
+       }
+       .primary{
+           font-size: 4rem;
+           padding: 15px;
+
+       }
+       .secondary{
+           font-size: 2rem;
+           padding: 15px;
+           
+       }
+       #services{
+           margin: 35px;
+           display: flex;
+
+
+       }
+       #services .box{
+           border: 4px solid red;
+           padding: 35px;
+           margin: 4px 6px;
+           border-radius: 30px;
+           background-color: antiquewhite;
+
+       }
+       #services .box img{
+           height: 160px;
+           margin: auto;
+           display: block;
+           border-radius: 25px;
+
+
+       }
+       .services{
+           text-align: center;
+
+       }
+       .services h1{
+           color: rgb(14, 247, 247);
+          
+
+       }
+       #clients{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .clients{
+           padding: 50px;
+          
+          
+       }
+       #client_section::before{
+
+           content: "";
+           position: absolute;  
+           width: 100%;
+           height: 90%;
+           z-index: -2;
+           background: url('/images/clients.jpg');
+           opacity: 0.5;
+           
+
+
+       }
+       #clients img{
+           height: 60px;
+           margin-top: 8px;
+           margin-right: 10px;
+           padding: 9px;
+       }
+       .primary1{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 4rem;
+
+       }
+       #client_section{
+           position: relative;
+           height: 344px;
+       }
+       #contact{
+           position: relative;
+       }
+       #contact::before{
+           content: "";
+           position: absolute;
+           width: 100%;
+           height:100%;
+           z-index: -1;
+           background: url('https://thumbs.dreamstime.com/b/contact-us-technical-support-center-customer-service-internet-business-technology-concept-hotline-businessman-hand-holding-icon-226509440.jpg');
+       }
+       footer{
+           background-color: black;
+           color: white;
+           padding: 10px 20px;
+       }
+       #contact_box{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           padding: 30px;
+       }
+     #contact_box input,
+     #contact_box area{
+         width: 100%;
+         padding: 0.35rem;
+     }
+     #contact h1{
+         text-align: center;
+         font-size: 4rem;
+     }
+     #contact_box form{
+         width: 40%;
+     }
+     #contact_box label{
+         font-size: 1.5rem;
+     }
+     footer{
+         text-align: center;
+         /* margin: auto;
+         display: block; */
+     }
+     #bulk_ordering{
+         margin: auto;
+         display: block;
+         font-size: 15px;
+        
+     }
+    
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div id="logo">
+            <!-- <img src="/images/dp.jpg" alt=""> -->
+     
+       
+        <ul>
+            <li class="item"><a href="">HOME</a></li>
+            <li class="item"><a href="">SERVICE</a></li>
+            <li class="item"><a href="">ABOUT US</a></li>
+            <li class="item"><a href="">CONTACT  US</a></li>
+           
+        </ul>
+    </div>
+    </nav>
+    <section id="home">
+        <h1 class="chanda">Order Your Food Online</h1>
+        <br>
+        <p>The importance of food is obvious and essential. Healthy food provides us the nutrients and energy to develop and grow, be active and healthy, to move, play, work, think and learn. 
+            Foods are directly related to our body and mental and social health because each food or liquid contains particular nutrition such as carbohydrates, protein, vitamins, minerals, fats, etc, which are very necessary for our physical and mental growth.   </p>
+        <p>Food and water are the main sources of nutrition and strengthening the body, but many of the foods we eat do not have any nutritional values.  </p>
+        <br><br>     
+        <button class="button" onclick="handleClick()">Order Now</button>
+        
+    </section>
+     <section class="services">
+         <h1 class="primary"> Our Services</h1>
+         <div id="services">
+             <div class="box">
+                 <img src="/images/11.jpg" alt="">
+                 <h2 class="secondary">Bulk Ordering</h2>
+                 <p class="center">Food plays an important role in the promotion of health and disease prevention. 
+                    In general, it consists of essential nutrients, such as carbohydrates, proteins, fats, minerals and vitamins which are consumed to provide nutritional support for an organism and ingested by an organism and assimilated by the organism's cells to sustain health. These nutritious foods are in the form of grains, pulses, fruits, vegetables, oils, etc.</p>
+                    <br>
+                    <button id="bulk_ordering" onclick="handleClick()">click here</button>
+             </div>
+            
+             <div class="box">
+                 <img src="/images/22.jpg" alt="">
+                 <h2 class="secondary">Food Catering</h2>
+                 <p class="center">Food plays an important role in the promotion of health and disease prevention. 
+                    In general, it consists of essential nutrients, such as carbohydrates, proteins, fats, minerals and vitamins which are consumed to provide nutritional support for an organism and ingested by an organism and assimilated by the organism's cells to sustain health. These nutritious foods are in the form of grains, pulses, fruits, vegetables, oils, etc.</p>
+                    <br>
+                    <button id="bulk_ordering" onclick="handleClick()">click here</button>
+             </div>
+             
+             <div class="box">
+                 <img src="/images/33.jpg" alt="">
+                 <h2 class="secondary">Food Ordering</h2>
+                 <p class="center">Food plays an important role in the promotion of health and disease prevention. 
+                    In general, it consists of essential nutrients, such as carbohydrates, proteins, fats, minerals and vitamins which are consumed to provide nutritional support for an organism and ingested by an organism and assimilated by the organism's cells to sustain health. These nutritious foods are in the form of grains, pulses, fruits, vegetables, oils, etc.</p>
+                    <br>
+                    <button id="bulk_ordering" onclick="handleClick()">click here</button>
+             </div>
+             
+         </div>
+     </section>
+     <section id="client_section">
+     <h1 class="primary1">Our Clients</h1>
+     <br><br>
+     <hr color="white">
+     <div id="clients">
+         <div class="client_item">
+             <img src="/images/logo11.jpg" alt="">
+         </div>
+         <!-- <div class="client_item">
+             <img src="/images/logo22.png" alt="">
+         </div> -->
+         <div class="client_item">
+             <img src="/images/logo44.png" alt="">
+         </div>
+         <!-- <div class="client_item">
+             <img src="/images/logo11.jpg" alt="">
+         </div> -->
+         <div class="client_item">
+             <img src="/images/logo55.png" alt="">
+         </div>
+         <div class="client_item">
+             <img src="/images/logo66.png" alt="">
+         </div>
+        
+     </div>
+     <hr color="white">
+    </section>
+    <section id="contact">
+        <h1 class="primary2">Contact Us</h1>
+        <hr>
+        <div id="contact_box">
+            <form action="">
+                <div class="form">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="enter your name">
+                </div>
+                <div class="form">
+                    <label for="name"></label><br>
+                    <input type="email" name="name" id="name1" placeholder="enter your email">
+                </div>
+                <div class="form">
+                    <label for="name"></label><br>
+                    <input type="text" name="name" id="name2" placeholder="enter your phone number">
+                </div>
+                <div class="form">
+                    <label for="name"></label><br>
+                   <textarea name="messege" id="" cols="77" rows="10">messege</textarea>
+                </div>
+                <div>
+                    <input type="button" value="submit now" onclick="handleClick()">
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <div class="center1">
+            <p>Copyright &copy; www.myonlinemeals.com all rights reserved!</p> 
+        </div>
+    </footer>
+
+    <script>
+        // const oreder_btn = document.getElementById('bulk_ordering');
+        function handleClick(){
+            alert("this site is under construction");
+        }
+
+    </script>
+</body>
+</html>
